@@ -1,0 +1,66 @@
+<div class="container-fluid auth-container">
+    <div class="row">
+        <div class="col-sm-3 col-md-3"></div>
+        <div class="col-sm-6 col-md-6">
+            <div class="card reg-card">
+                <div class="header">
+                    <h4 class="text-center auth-header-text"> Register </h4>
+                </div>
+                <hr/>
+                <div class="content">
+                    <div *ngIf="errors.length > 0">
+                        <div class="error-text text-center" *ngFor="let error of errors"> **{{error}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <label>Name</label>
+                            <input type="text" name="name" id="name" class="form-control border-input"
+                                   [(ngModel)]="name" placeholder="Name" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <label>Username</label>
+                            <input type="text" name="username" id="username" class="form-control border-input"
+                                   [(ngModel)]="username" placeholder="Username" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <label>Email</label>
+                            <input type="email" name="email" id="email" class="form-control border-input"
+                                   [(ngModel)]="email" placeholder="Email" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label>Password</label>
+                            <input type="password" name="password" id="password" class="form-control border-input"
+                                   [(ngModel)]="password" placeholder="Password" required/>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label>Confirm Password</label>
+                            <input type="password" name="cpassword" id="c-password" class="form-control border-input"
+                                    placeholder="Confirm Password" [(ngModel)]="cPassword"/>
+                            <span class="danger-text pull-right" *ngIf="cPassword.length > 0 && cPassword !== password">
+                                Passwords do not match
+                            </span>
+                        </div>
+                    </div><br/>
+                    <div class="row">
+                        <div class="form-group text-center col-sm-12">
+                            <button class="btn btn-primary btn-fill btn-wd" (click)="submitForm()" [disabled]="inputsInvalid()">
+                                Register
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center">Already have an account?
+                        <a routerLink="/login">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3"></div>
+    </div>
+</div>
+

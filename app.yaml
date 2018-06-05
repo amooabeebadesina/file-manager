@@ -1,0 +1,3 @@
+entrypoint: php artisan migrate
+env: flex
+runtime: python

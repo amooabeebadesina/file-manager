@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">My Files</h4>
+                <div class="pull-right">
+                    <button class="btn btn-primary" (click)="openFileModal()">Upload New File</button> &nbsp;
+                    <button class="btn btn-outline-danger" (click)="trashFiles()">Add To Trash</button>
+                </div>
+            </div>
+            <div class="content table-responsive table-full-width">
+                <span class="text-center error-text" *ngIf="error"> ** An error occured from the server ** </span>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Select to Delete</th>
+                            <th>File Name</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let file of files">
+                        <td>
+                            <input type="checkbox" (change)="toggleSelected(file.id)"/>
+                        </td>
+                        <td><a href="{{file.file_path}}" target="_blank">{{file.name}}</a></td>
+                        <td>{{getFileType(file.name)}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="newFileModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+                <p>Hello Nigga</p>
+            </div>
+        </div>
+    </div>
+</div>

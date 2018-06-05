@@ -1,0 +1,26 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+skip_files:
+  - .env
+
+env_variables:
+  APP_LOG: errorlog
+  APP_KEY: base64:lYRnG2/PyMnjZh4zBADKwU4VXwmKr3G2xHsZcpKbKtw=
+  STORAGE_DIR: /tmp
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+  DB_HOST: localhost
+  DB_DATABASE: kibb_deen
+  DB_USERNAME: root
+  DB_PASSWORD: akeebdeen
+  DB_SOCKET: "/cloudsql/bezop-kibb:us-central1:bezop-kibb",
+  GOOGLE_CLOUD_PROJECT_ID: bezop-kibb
+  GOOGLE_CLOUD_KEY_FILE:
+  GOOGLE_CLOUD_STORAGE_BUCKET:
+  GOOGLE_CLOUD_STORAGE_PATH_PREFIX:
+  GOOGLE_CLOUD_STORAGE_API_URI:
+beta_settings:
+  cloud_sql_instances: bezop-kibb:us-central1:bezop-kibb

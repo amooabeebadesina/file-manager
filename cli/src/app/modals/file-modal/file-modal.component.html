@@ -1,0 +1,14 @@
+<div class="card upload-card">
+    <div class="header">
+        <h4 class="title text-center">Upload New File</h4>
+    </div><hr/>
+    <div class="content">
+       <div class="row form-group">
+           <input type="file" class="form-control" multiple (change)="check($event)"/>
+       </div>
+        <mat-progress-bar [mode]="indeterminate" *ngIf="showLoading"></mat-progress-bar><br/>
+        <div class="row text-center">
+            <button class="form-control btn btn-primary" (click)="onUpload()">Upload</button>
+        </div>
+    </div>
+</div>

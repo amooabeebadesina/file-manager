@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+    min-height: 100% ;
+    background-color: #efefef;
+}
+.auth-container {
+    height: 100%;
+    background-color: #efefef;
+}
+
+.auth-header-text {
+    color: #EB5E28;
+}
+
+.error-text {
+    color: red;
+}
+
+.logout {
+    cursor: pointer
+}
+
+.love-icon {
+    color:red;
+}

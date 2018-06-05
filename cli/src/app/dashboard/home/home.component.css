@@ -1,0 +1,17 @@
+.active-count {
+    background: green;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.dashboard-card {
+    padding:20px !important;
+}
+
+.count-value {
+    color: #ffffff;
+}
+
+.btn-div {
+    padding:10px;
+}

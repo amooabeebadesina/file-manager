@@ -1,0 +1,46 @@
+<div class="container-fluid auth-container">
+    <div class="row">
+        <div class="col-sm-3 col-md-3"></div>
+        <div class="col-sm-6 col-md-6">
+            <div class="card login-card">
+                <div class="header">
+                    <h4 class="text-center auth-header-text"> Login</h4>
+                </div>
+                <hr/>
+                <div class="content">
+                    <div class="alert alert-danger text-center" *ngIf="errMsg">
+                        {{ errMsg }}
+                    </div>
+                    <div *ngIf="errors.length > 0">
+                        <div class="error-text text-center" *ngFor="let error of errors"> **{{error}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <label>Email</label>
+                            <input type="email" name="email" id="email" class="form-control border-input"
+                                   [(ngModel)]="email" placeholder="Email" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <label>Password</label>
+                            <input type="password" name="password" id="password" class="form-control border-input"
+                                   [(ngModel)]="password" placeholder="Password" required/>
+                        </div>
+                    </div><br/>
+                    <div class="row">
+                        <div class="form-group text-center col-sm-12">
+                            <button class="btn btn-primary btn-fill btn-wd" (click)="submitForm()" [disabled]="inputsInvalid()">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center">Don't have an account yet?
+                        <a routerLink="/register">Create one</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3"></div>
+    </div>
+</div>
